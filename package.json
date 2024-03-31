@@ -4,6 +4,7 @@
   "description": "now i am learning react",
   
   "scripts": {
+    "start":"parcel index.html",
     "test": "jest"
   },
   "repository": {
