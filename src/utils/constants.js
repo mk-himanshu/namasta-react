@@ -1,0 +1,2 @@
+export const logo_url ="https://img.freepik.com/free-vector/hand-drawn-pizzeria-vintage-logo_23-2150174657.jpg?w=740&t=st=1711889429~exp=1711890029~hmac=a0d1f6f72118ee1a2b5c5e80c7887acf9d316ee3ee23617adb26e5418b87a213";
+export const cdn_link ="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
