@@ -16,3 +16,6 @@ import { cdn_link } from "../utils/constants";
   };
 
   export default Restro_card
+
+
+  // data.cards[1].card.card.gridElements.infoWithStyle.restaurants.map(restaurant => restaurant.info
