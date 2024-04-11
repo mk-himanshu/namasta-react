@@ -1,4 +1,4 @@
-import Restro_card from "./restro_card";
+import Restro_card ,{with_veg_label} from "./restro_card";
 import res_list from "../utils/mock_data"
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
@@ -9,6 +9,8 @@ const Body =() =>{
     const [listOfRestarount,setlistOfRestarount] = useState([]);
     const [search_text, setsearch_text] = useState("");
     const [filtered_restaurent,setfiltered_restaurent] = useState([]);
+    console.log(listOfRestarount)
+    const Restro_veg_label = with_veg_label(Restro_card);
 
     useEffect(() =>{
 
@@ -80,7 +82,12 @@ const Body =() =>{
             <div className="restro_container ">
                 {/* <Restro_card res_data = {res_list[0]}/> */}
                 {/* if restraunt is open than label open label to the card  */}
-                  {filtered_restaurent.map(restaurent => <Link to={"/retaurents/"+restaurent.info.id} className="link" ><Restro_card  res_data={restaurent}/></Link>)}
+                  {filtered_restaurent.map(restaurent => 
+                  <Link to={"/retaurents/"+restaurent.info.id} className="link" >
+                    {
+                        restaurent.info.veg ? <Restro_veg_label res_data={restaurent}/> : <Restro_card  res_data={restaurent}/>
+                    }
+                  </Link>)}
                   
                   
             </div>

@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react"
 import { useSearchParams } from "react-router-dom";
+import Res_containt from "./Res_containt";
 
 
 const Restr_menu = () =>{
@@ -20,9 +21,11 @@ const Restr_menu = () =>{
     
 
     return(
-        <div className="menu">
-             <h1>{res_info?.name}</h1>
-             <h4>{res_info?.cuisines?.join(",")}</h4>
+        <div className="menu ">
+             <div className="m-auto p-4 flex">
+             <h1 className="font-bold m-auto text-2xl">{res_info?.name}</h1>
+             
+             {/* <h4>{res_info?.cuisines?.join(",")}</h4>
               <h4>{res_info?.costForTwo}</h4>
               <h4>{res_info?.avgRating}</h4>
              <ul>
@@ -30,7 +33,18 @@ const Restr_menu = () =>{
                     <li>{menu?.info?.cuisines}</li>
                 ))}
                 
-             </ul>
+             </ul> */}
+             </div>
+             <div className="border border-solid border-black rounded-3xl  m-auto shadow-2xl transition-shadow shadow-gray-500 border w-[60%]">
+               <h1  className="px-4 m-4 ">⭐{res_info?.avgRatingString +"  " +"Rating  "+ (res_info?.totalRatingsString) + " < --- >   "+ res_info?.costForTwo}</h1>
+               <h1 className="px-4 m-4 text-red-500">{res_info?.cuisines.join(" ,")}</h1>
+               <h2 className="px-4 m-4">Outlet:-- {res_info?.areaName + " ," + res_info?.locality}</h2>
+               <h2 className="px-20  m-4  border-b-2 border-spacing-3">{res_info?.sla?.slaString}</h2>
+               
+               <p className=" p-2 m-2">Order above 149 for discounted delivary fee</p>
+
+             </div>
+             <Res_containt res_data={res_info} />
         </div>
     )
 }

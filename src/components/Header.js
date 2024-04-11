@@ -20,7 +20,7 @@ const Header = () =>{
                     <li className="px-3"><Link to="./About">About</Link></li>
                     <li className="px-3"><Link to="./Contact">Contact Us</Link></li>
                     <li className="px-3">Cart</li>
-                    <button className="log_btn" onClick={() =>{
+                    <button className="log_btn px-2  bg-green-300 rounded-lg" onClick={() =>{
                         btn_name==="login" ? setbtn_name("logOut") : setbtn_name("login")
                     }}>
                         {btn_name}
