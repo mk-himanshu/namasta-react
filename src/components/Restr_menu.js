@@ -35,7 +35,7 @@ const Restr_menu = () =>{
                 
              </ul> */}
              </div>
-             <div className="border border-solid border-black rounded-3xl  m-auto shadow-2xl transition-shadow shadow-gray-500 border w-[60%]">
+             <div className="border border-solid border-black rounded-3xl  m-auto shadow-2xl transition-shadow shadow-gray-500  w-[60%]">
                <h1  className="px-4 m-4 ">⭐{res_info?.avgRatingString +"  " +"Rating  "+ (res_info?.totalRatingsString) + " < --- >   "+ res_info?.costForTwo}</h1>
                <h1 className="px-4 m-4 text-red-500">{res_info?.cuisines.join(" ,")}</h1>
                <h2 className="px-4 m-4">Outlet:-- {res_info?.areaName + " ," + res_info?.locality}</h2>
