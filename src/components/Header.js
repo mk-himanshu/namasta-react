@@ -1,12 +1,19 @@
-import { useState } from "react";
+import { useState ,useContext} from "react";
 import { logo_url } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import Use_context from "../utils/User_context"
+import User_context from "../utils/User_context";
 // import Grocery from "./Grocery";
 
 const Header = () =>{
     const [btn_name,setbtn_name] = useState("login")
     const online_status = useOnlineStatus();
+    
+    //use react context....
+    const data = useContext(User_context)
+    console.log(data);
+
         return(
         <div className="flex justify-between bg-pink-200 shadow-md ">
             <div className="logo_container">

@@ -9,7 +9,7 @@ const Body =() =>{
     const [listOfRestarount,setlistOfRestarount] = useState([]);
     const [search_text, setsearch_text] = useState("");
     const [filtered_restaurent,setfiltered_restaurent] = useState([]);
-    console.log(listOfRestarount)
+    // console.log(listOfRestarount)
     const Restro_veg_label = with_veg_label(Restro_card);
 
     useEffect(() =>{
@@ -19,8 +19,10 @@ const Body =() =>{
     const fetchData = async () =>{
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.251294610850675&lng=87.02275671064854&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
         const json = await data.json();
-        console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
-        console.log(listOfRestarount)
+
+        // console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+        // console.log(listOfRestarount)
+        
          setlistOfRestarount(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
          setfiltered_restaurent(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
 
@@ -50,7 +52,7 @@ const Body =() =>{
                     }}></input>
 
                     <button className="px-4  m-2 bg-green-500 rounded-md" onClick={() =>{
-                    console.log(search_text)
+                    // console.log(search_text)
                     
                     const filtered_list = listOfRestarount.filter((res) =>
                     res.info.name.toLowerCase().includes(search_text.toLowerCase()));
