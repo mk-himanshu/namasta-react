@@ -7,6 +7,8 @@ import About from "./components/About";
 import Contact from "./components/contact";
 import Error from "./components/Error";
 import Restr_menu from "./components/Restr_menu";
+// import { Provider } from "react-redux";
+// import appStore from "./redux/appStore"
 // import Grocery from "./components/Grocery";
 
 //chunking or split file bundling-----when we need or somethings than load
@@ -21,8 +23,10 @@ const Grocery = lazy(()=>
 const AppLayout = () =>{
     return(
         <div className="app">
-            <Header/>
-            <Outlet/>
+            
+                <Header/>
+                <Outlet/>
+            
         </div>
     );
 };

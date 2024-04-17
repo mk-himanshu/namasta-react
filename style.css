@@ -25,6 +25,13 @@
     width:100%;
     height: 50%;
 }
+.style:hover{
+    background-color: aquamarine;
+    color: black;
+    cursor: pointer;
+    transform: translate3d(1px,1px,1px)
+
+}
 
 
 

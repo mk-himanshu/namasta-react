@@ -10,7 +10,7 @@ const Menu_item = () =>{
                 <p>parathas
                     paneer tikka, bell peppers, and onions</p>
             </div> 
-            <div className=" border-2 border-green-300 border-solid  text-green-600 m-6 px-7 py-4 rounded-lg w-[15%]">
+            <div className=" border-2 border-green-300 border-solid  text-green-600 m-6 px-7 py-4 rounded-lg w-[15%] style">
                <button className="font-bold ">
                 Add +
                </button>
@@ -25,7 +25,7 @@ const Menu_item = () =>{
                 <h2>💚 3.4(15)</h2>
                 <p>Biryani is a mixed rice dish, mainly popular in South Asia.</p>
             </div> 
-            <div className=" border-2 border-green-300 border-solid  text-green-600 m-6 px-7 py-4 rounded-lg">
+            <div className=" border-2 border-green-300 border-solid  text-green-600 m-6 px-7 py-4 rounded-lg style">
                <button className="font-bold">
                 Add +
                </button>
@@ -39,7 +39,7 @@ const Menu_item = () =>{
                 <h2>💚 3.2(15)</h2>
                 <p>boiled eggs, onions, tomatoes, whole & ground spices and herbs</p>
             </div> 
-            <div className=" border-2 border-green-300 border-solid  text-green-600 m-6 px-7 py-4 rounded-lg">
+            <div className=" border-2 border-green-300 border-solid  text-green-600 m-6 px-7 py-4 rounded-lg style">
                <button className="font-bold">
                 Add +
                </button>
@@ -53,7 +53,7 @@ const Menu_item = () =>{
                 <h2>💚 4.2(105)</h2>
                 <p>paneer, spices, onions, tomatoes, cashews and butter</p>
             </div> 
-            <div className=" border-2 border-green-300 border-solid  text-green-600 m-6 px-7 py-4 rounded-lg">
+            <div className=" border-2 border-green-300 border-solid  text-green-600 m-6 px-7 py-4 rounded-lg style">
                <button className="font-bold">
                 Add +
                </button>

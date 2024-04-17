@@ -9,6 +9,7 @@ const Body =() =>{
     const [listOfRestarount,setlistOfRestarount] = useState([]);
     const [search_text, setsearch_text] = useState("");
     const [filtered_restaurent,setfiltered_restaurent] = useState([]);
+    const [res_chain, set_res_chain] = useState([]);
     // console.log(listOfRestarount)
     const Restro_veg_label = with_veg_label(Restro_card);
 
@@ -25,6 +26,9 @@ const Body =() =>{
         
          setlistOfRestarount(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
          setfiltered_restaurent(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
+         set_res_chain(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
+            
+            
 
         
     }
@@ -81,6 +85,16 @@ const Body =() =>{
                </div>
             
             </div>
+
+            {/* <div className="flex flex-row w-[80%]">
+            {res_chain.map(restaurent => 
+                  <Link to={"/retaurents/"+restaurent.info.id} className="link" >
+                    {
+                        <Restro_card  res_data={restaurent}/>
+                    }
+                  </Link>)}
+            </div> */}
+
             <div className="restro_container ">
                 {/* <Restro_card res_data = {res_list[0]}/> */}
                 {/* if restraunt is open than label open label to the card  */}
